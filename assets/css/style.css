@@ -42,19 +42,15 @@ body {
 
 
 .navbar .logo {
+  color: #000000;      /* Your rich red */
+  font-family: 'Bebas Neue', cursive;  /* Or your chosen font */
   font-weight: 900;
-  font-size: 1.7rem;
+  font-size: 2rem;
   text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.logo img {
-  height: 60px;
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-}
 
 
 
