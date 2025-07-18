@@ -35,7 +35,6 @@ body {
 
 
 .navbar .logo {
-  color: #E03C3C; /* Rich red */
   font-weight: 900;
   font-size: 1.7rem;
   text-decoration: none;
@@ -44,8 +43,12 @@ body {
 .logo img {
   height: 60px;
   width: auto;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
 }
+
 
 .navbar .nav-links {
   list-style: none;
