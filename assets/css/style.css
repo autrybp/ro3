@@ -26,7 +26,13 @@ body {
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* optional soft shadow */
+
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* space out letters a bit */
+  font-weight: normal; /* Bebas Neue doesn’t need bold */
 }
+
 
 .navbar .logo {
   color: #E03C3C; /* Rich red */
