@@ -20,18 +20,25 @@ body {
 
 /* Navbar */
 .navbar {
-  background: #ffffff; /* White navbar */
+  background: #ffffff;
   padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* optional soft shadow */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
 
+.navbar .nav-links li a {
   font-family: 'Bebas Neue', cursive;
   text-transform: uppercase;
-  letter-spacing: 2px; /* space out letters a bit */
-  font-weight: normal; /* Bebas Neue doesn’t need bold */
+  letter-spacing: 2px;
+  font-weight: normal;
+  color: #111111;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
+
 
 
 .navbar .logo {
@@ -57,13 +64,6 @@ body {
   gap: 25px;
 }
 
-.navbar .nav-links li a {
-  color: #111111; /* Black text */
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
 
 .navbar .nav-links li a:hover {
   color: #E03C3C; /* Red hover */
