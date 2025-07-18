@@ -1,5 +1,12 @@
 /* === BLOG PAGE STYLES === */
 
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #fefefe;
+  color: #111;
+}
+
 .blog-header {
   text-align: center;
   padding: 80px 20px 40px;
@@ -7,10 +14,12 @@
 }
 
 .blog-header h1 {
+  font-family: 'Bebas Neue', cursive;
   font-size: 3rem;
   color: #E03C3C;
   margin-bottom: 10px;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .blog-header p {
@@ -60,6 +69,7 @@
 .blog-card-content h3 a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .blog-card-content h3 a:hover {
