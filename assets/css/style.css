@@ -163,3 +163,21 @@ body {
     width: 100%;
   }
 }
+
+/* Typewriter effect */
+
+.typewriter-text {
+  border-right: 2px solid #E03C3C;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  font-weight: 700;
+  color: #E03C3C;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
