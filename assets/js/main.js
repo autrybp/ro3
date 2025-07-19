@@ -72,3 +72,8 @@ const words = [
   document.addEventListener("DOMContentLoaded", () => {
     setTimeout(type, 500);
   });
+
+  function toggleMobileMenu() {
+  const navLinks = document.getElementById('nav-links');
+  navLinks.classList.toggle('active');
+}
