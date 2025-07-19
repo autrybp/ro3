@@ -37,8 +37,8 @@ const words = [
   "Voice", "Atmosphere", "Wonder"
 ];
 
-  const typingSpeed = 100;
-  const erasingSpeed = 40;
+  const typingSpeed = 80;
+  const erasingSpeed = 50;
   const delayBetweenWords = 1600;
 
   const textSpan = document.querySelector(".typewriter-text");

@@ -226,7 +226,7 @@ body {
   overflow: hidden;
   display: inline-block;
   font-weight: 700;
-  color: #000000;
+  color: #ffffff;
   animation: blink-caret 0.75s step-end infinite;
 }
 
