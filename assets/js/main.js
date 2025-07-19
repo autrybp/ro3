@@ -1,14 +1,14 @@
 const words = [
-  "rule of thirds.", "culture.", "story.", "mood.", "perspective.", "vibe.", "art.", "frame.", "silence.",
-  "light.", "space.", "balance.", "shadow.", "emotion.", "focus.", "motion.", "scene.", "texture.", "moment.",
-  "expression.", "contrast.", "vision.", "stillness.", "time.", "energy.", "depth.", "shape.", "color.",
-  "form.", "grain.", "clarity.", "glow.", "simplicity.", "lines.", "intent.", "layer.", "symmetry.",
-  "voice.", "atmosphere.", "wonder."
+  "Inspired by the Rule of Thirds", "Culture", "Story", "Mood", "Perspective", "Vibe", "Silence",
+  "Light", "Space", "Balance", "Shadow", "Emotion", "Focus", "Motion", "Scene", "Depth", "Moment",
+  "Expression", "Contrast", "Vision", "Stillness", "Time", "Energy", "Shape", "Color",
+  "Form", "Grain", "Clarity", "Glow", "Simplicity", "Lines", "Intent", "Symmetry",
+  "Voice", "Atmosphere", "Wonder"
 ];
 
-const typingSpeed = 100;
-const erasingSpeed = 40;
-const delayBetweenWords = 1600;
+const typingSpeed = 90;
+const erasingSpeed = 50;
+const delayBetweenWords = 2000;
 
 const textSpan = document.querySelector(".typewriter-text");
 let wordIndex = 0;
