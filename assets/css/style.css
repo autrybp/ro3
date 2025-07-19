@@ -111,22 +111,39 @@ body {
 .primary-btn {
   background-color: #E03C3C; /* Primary red */
   color: #ffffff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(224, 60, 60, 0.3);
 }
 
 .primary-btn:hover {
-  background-color: #B23131; /* Darker red hover */
+  background-color: #B23131; /* Darker red */
+  box-shadow: 0 6px 14px rgba(178, 49, 49, 0.5);
 }
 
 .secondary-btn {
   background-color: transparent;
   border: 2px solid #E03C3C;
-  color: #ffffff;
+  color: #E03C3C; /* Use red text on white */
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .secondary-btn:hover {
   background-color: #E03C3C;
   color: #ffffff;
+  box-shadow: 0 6px 14px rgba(224, 60, 60, 0.5);
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
