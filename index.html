@@ -25,19 +25,30 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
+ <!-- Hero Section -->
+<section class="hero-carousel">
+  <!-- Slides as background images -->
+  <div class="hero-slide active" style="background-image: url('assets/img/hero1.jpeg');"></div>
+  <div class="hero-slide" style="background-image: url('assets/img/hero2.jpg');"></div>
+  <div class="hero-slide" style="background-image: url('assets/img/hero3.jpg');"></div>
+
+  <!-- Overlay content -->
+  <div class="hero-overlay">
     <div class="hero-content container">
       <h1>
         <span class="typewriter-text"></span>
       </h1>
-
       <div class="hero-buttons">
         <a href="shop.html" class="btn primary-btn">View Latest Drop</a>
         <a href="contact.html" class="btn secondary-btn">Book a Shoot</a>
       </div>
     </div>
-  </section>
+  </div>
+
+  <!-- Navigation dots -->
+  <div class="carousel-dots" id="carousel-dots"></div>
+</section>
+
 
   <script src="assets/js/main.js"></script>
 </body>
