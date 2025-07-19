@@ -199,8 +199,10 @@ body {
 }
 
 
+
 /* Responsive */
 @media (max-width: 768px) {
+
   .navbar .nav-links {
     display: none; /* Hide on mobile, can add hamburger later */
   }
@@ -345,3 +347,36 @@ body {
   }
 }
 
+/* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #111;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}

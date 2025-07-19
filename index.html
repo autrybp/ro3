@@ -11,19 +11,28 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="" class="logo">RO3 Society</a>
-      <ul class="nav-links">
-        <li><a href="/gallery/">Gallery</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/shop/">Shop</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/academy/">Academy</a></li>
-      </ul>
-    </div>
-  </nav>
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="/" class="logo">RO3 Society</a>
+
+    <!-- Hamburger (only visible on mobile) -->
+    <button class="hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
+      &#9776;
+    </button>
+
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/gallery/">Gallery</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/shop/">Shop</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/academy/">Academy</a></li>
+    </ul>
+  </div>
+</nav>
+
 
  <!-- Hero Section -->
 <section class="hero-carousel">
