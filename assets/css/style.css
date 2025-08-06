@@ -8,42 +8,35 @@
 html, body {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
-    /* A simple, solid background color */
     background-color: #000;
 }
 
 /* --- HEADER AND NAVIGATION --- */
-
-/* This container holds the logo and navbar */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 40px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     background-color: transparent;
     z-index: 100;
-
 }
-
 
 /* --- LOGO --- */
 .logo img {
-    margin-top: 20px; /* Adjusts the logo position */
+    margin-top: 20px;
     width: 200px;
-    height: auto;   /* Maintains the aspect ratio */
-    display: block; /* Removes any extra space below the image */
+    height: auto;
+    display: block;
 }
 
+/* Navbar positioning */
 .navbar {
-    margin-top:-90px;
+    margin-top: -90px;
 }
-/* This styles the navigation bar */
 
 /* --- NAVIGATION LINKS --- */
 .navbar a {
@@ -51,22 +44,21 @@ html, body {
     text-decoration: none;
     font-weight: 300;
     text-transform: uppercase;
-    margin-left: 20px; /* Space between each nav link */
-    margin-right:30px;
+    margin-left: 20px;
+    margin-right: 30px;
     font-size: 20px;
-    transition: color 0.3s ease; /* Smooth color change on hover */
+    transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #303030; /* A slightly dimmer white when hovered */
+    color: #303030;
 }
 
 /* --- SLIDESHOW STYLING --- */
-
 .slideshow-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full screen height */
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -80,7 +72,6 @@ html, body {
     animation: fade 42s infinite;
 }
 
-/* Set delays for each slide */
 .slide:nth-child(1) { animation-delay: 0s; }
 .slide:nth-child(2) { animation-delay: 7s; }
 .slide:nth-child(3) { animation-delay: 14s; }
@@ -88,7 +79,6 @@ html, body {
 .slide:nth-child(5) { animation-delay: 28s; }
 .slide:nth-child(6) { animation-delay: 35s; }
 
-/* Keyframes to fade in, stay, and fade out */
 @keyframes fade {
     0%   { opacity: 0; }
     5%   { opacity: 1; }
@@ -97,17 +87,16 @@ html, body {
     100% { opacity: 0; }
 }
 
-
 /* --- DROPDOWN CONTAINER --- */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* --- DROPDOWN LINKS (hidden initially) --- */
+/* --- DROPDOWN LINKS --- */
 .dropdown-content {
     position: absolute;
-    top: 100%; /* Appears below the parent link */
+    top: 100%;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -116,7 +105,6 @@ html, body {
     transition: opacity 0.4s ease;
 }
 
-/* --- INDIVIDUAL DROPDOWN LINKS --- */
 .dropdown-content a {
     color: white;
     text-decoration: none;
@@ -127,14 +115,91 @@ html, body {
     transition: color 0.3s ease;
 }
 
-/* --- FADE IN ON HOVER --- */
 .dropdown:hover .dropdown-content {
     opacity: 1;
     visibility: visible;
 }
 
-/* --- OPTIONAL: HOVER EFFECT ON SUBLINKS --- */
 .dropdown-content a:hover {
     color: #303030;
 }
 
+/* --- HAMBURGER MENU (desktop hidden) --- */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* --- MOBILE STYLES --- */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        z-index: 200;
+        font-size: 30px;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        z-index: 150;
+        margin-top: 0;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: relative;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: none;
+        padding-left: 15px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* --- DROPDOWN ARROWS --- */
+    .dropdown > a::after {
+        content: '';
+        display: inline-block;
+        margin-left: 6px;
+        margin-bottom: 2px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid white;
+    }
+}

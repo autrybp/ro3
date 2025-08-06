@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RO3 Society | Photography Community, Blog & Academy</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <a href="/" class="logo">
-            <img src="assets/img/logo.png" alt="ro3society Logo">
+            <img src="assets/img/logo.png" alt="ro3society Logo" />
         </a>
+
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
         <nav class="navbar">
             <div class="dropdown">
-            <a href="/blog/">BLOG</a>
+                <a href="/blog/">BLOG</a>
                 <div class="dropdown-content">
                     <a href="/blog/latest/">LATEST</a>
                     <a href="/blog/reviews/">REVIEWS</a>
@@ -22,8 +26,9 @@
                     <a href="/blog/">MORE +</a>
                 </div>
             </div>
+
             <div class="dropdown">
-            <a href="/gallery/">GALLERY</a>
+                <a href="/gallery/">GALLERY</a>
                 <div class="dropdown-content">
                     <a href="/gallery/landscape/">LANDSCAPE</a>
                     <a href="/gallery/portrait/">PORTRAIT</a>
@@ -36,9 +41,11 @@
                     <a href="/gallery/">MORE +</a>
                 </div>
             </div>
+
             <a href="/shop/">SHOP</a>
             <a href="/events/">EVENTS</a>
-                <div class="dropdown">
+
+            <div class="dropdown">
                 <a href="/projects/">PROJECTS</a>
                 <div class="dropdown-content">
                     <a href="/projects/fairlady/">PROJECT FAIRLADY</a>
@@ -46,17 +53,17 @@
                     <a href="/projects/">MORE +</a>
                 </div>
             </div>
+
             <div class="dropdown">
-            <a href="/team/">TEAM</a>
+                <a href="/team/">TEAM</a>
                 <div class="dropdown-content">
                     <a href="/team/people/">PEOPLE</a>
                     <a href="/team/ambassadors/">AMBASSADORS</a>
                     <a href="/team/partners/">PARTNERS</a>
-                    <!--<a href="/team/interns/">INTERNS</a>-->
-                    <!--<a href="/team/volunteers/">VOLUNTEERS</a>-->
                     <a href="/team/">MORE +</a>
                 </div>
             </div>
+
             <div class="dropdown">
                 <a href="/academy/">ACADEMY</a>
                 <div class="dropdown-content">
@@ -77,7 +84,11 @@
         <div class="slide" style="background-image: url('assets/img/image6.jpg');"></div>
     </div>
 
-    
-
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
