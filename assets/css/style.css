@@ -34,14 +34,14 @@ html, body {
 
 /* --- LOGO --- */
 .logo img {
-    margin-top: -20px; /* Adjusts the logo position */
+    margin-top: 20px; /* Adjusts the logo position */
     width: 200px;
     height: auto;   /* Maintains the aspect ratio */
     display: block; /* Removes any extra space below the image */
 }
 
 .navbar {
-    margin-top:-100px;
+    margin-top:-90px;
 }
 /* This styles the navigation bar */
 
@@ -58,7 +58,7 @@ html, body {
 }
 
 .navbar a:hover {
-    color: #ccc; /* A slightly dimmer white when hovered */
+    color: #303030; /* A slightly dimmer white when hovered */
 }
 
 /* --- SLIDESHOW STYLING --- */
@@ -96,3 +96,45 @@ html, body {
     25%  { opacity: 0; }
     100% { opacity: 0; }
 }
+
+
+/* --- DROPDOWN CONTAINER --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* --- DROPDOWN LINKS (hidden initially) --- */
+.dropdown-content {
+    position: absolute;
+    top: 100%; /* Appears below the parent link */
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+}
+
+/* --- INDIVIDUAL DROPDOWN LINKS --- */
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 8px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* --- FADE IN ON HOVER --- */
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- OPTIONAL: HOVER EFFECT ON SUBLINKS --- */
+.dropdown-content a:hover {
+    color: #303030;
+}
+
