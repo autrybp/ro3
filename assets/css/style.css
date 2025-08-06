@@ -136,63 +136,73 @@ html, body {
 
 /* --- MOBILE STYLES --- */
 @media (max-width: 768px) {
+    /* Stack header elements vertically on small screens */
     .header {
         flex-direction: column;
         align-items: flex-start;
         padding: 10px 20px;
     }
 
+    /* Hamburger button visible only on mobile */
     .hamburger {
         display: block;
         position: fixed;
-        top: 20px;
-        right: 30px;
-        z-index: 200;
-        font-size: 30px;
+        top: 20px; /* Position near top */
+        right: 30px; /* Align right */
+        z-index: 200; /* Above everything else */
+        font-size: 30px; /* Larger icon */
     }
 
+    /* Mobile navbar initially hidden */
     .navbar {
         display: none;
         position: absolute;
-        top: 80px;
+        top: 80px; /* Below header */
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark bg */
+        backdrop-filter: blur(0px); /* Default no blur */
         flex-direction: column;
         align-items: flex-start;
         padding: 20px;
-        z-index: 150;
+        z-index: 150; /* Below hamburger */
         margin-top: 0;
+        transition: backdrop-filter 0.3s ease; /* Smooth blur transition */
     }
 
+    /* When navbar is active (menu toggled open) */
     .navbar.active {
         display: flex;
+        backdrop-filter: blur(10px); /* 🔍 Enable blur */
     }
 
+    /* Style individual nav links in mobile mode */
     .navbar a {
-        margin: 10px 0;
+        
         font-size: 18px;
     }
 
+    /* Make dropdowns take full width */
     .dropdown {
         width: 100%;
     }
 
+    /* Hide dropdown content by default */
     .dropdown-content {
         position: relative;
         opacity: 1 !important;
         visibility: visible !important;
         display: none;
-        padding-left: 15px;
+        padding-left: 15px; /* Indent child links */
     }
 
+    /* Show dropdown links when hovering parent */
     .dropdown:hover .dropdown-content {
         display: flex;
         flex-direction: column;
     }
 
-    /* --- DROPDOWN ARROWS --- */
+    /* Add downward arrow beside parent links with dropdowns */
     .dropdown > a::after {
         content: '';
         display: inline-block;
@@ -200,6 +210,7 @@ html, body {
         margin-bottom: 2px;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
-        border-top: 6px solid white;
+        border-top: 6px solid white; /* White triangle */
     }
 }
+
