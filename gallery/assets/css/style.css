@@ -1,0 +1,311 @@
+/* Basic Reset & Font Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+}
+
+/* --- HEADER AND NAVIGATION --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    z-index: 100;
+}
+
+/* --- LOGO --- */
+.logo img {
+    margin-top: 20px;
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+/* Navbar positioning */
+.navbar {
+    margin-top: -90px;
+}
+
+/* --- NAVIGATION LINKS --- */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-right: 30px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Add this new class for the current page */
+.navbar a.active-link {
+    color: #303030;
+}
+
+.navbar a:hover {
+    color: #303030;
+}
+
+/* --- SLIDESHOW STYLING --- */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fade 42s infinite;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 7s; }
+.slide:nth-child(3) { animation-delay: 14s; }
+.slide:nth-child(4) { animation-delay: 21s; }
+.slide:nth-child(5) { animation-delay: 28s; }
+.slide:nth-child(6) { animation-delay: 35s; }
+
+@keyframes fade {
+    0%   { opacity: 0; }
+    5%   { opacity: 1; }
+    20%  { opacity: 1; }
+    25%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* --- DROPDOWN CONTAINER --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* --- DROPDOWN LINKS --- */
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 8px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-content a:hover {
+    color: #303030;
+}
+
+/* --- HAMBURGER MENU (desktop hidden) --- */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* --- MOBILE STYLES --- */
+@media (max-width: 768px) {
+    /* Stack header elements vertically on small screens */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    /* Hamburger button visible only on mobile */
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 20px; /* Position near top */
+        right: 30px; /* Align right */
+        z-index: 200; /* Above everything else */
+        font-size: 30px; /* Larger icon */
+    }
+
+    /* Mobile navbar initially hidden */
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 80px; /* Below header */
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark bg */
+        backdrop-filter: blur(0px); /* Default no blur */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        z-index: 150; /* Below hamburger */
+        margin-top: 0;
+        transition: backdrop-filter 0.3s ease; /* Smooth blur transition */
+    }
+
+    /* When navbar is active (menu toggled open) */
+    .navbar.active {
+        display: flex;
+        backdrop-filter: blur(10px); /* 🔍 Enable blur */
+    }
+
+    /* Style individual nav links in mobile mode */
+    .navbar a {
+        
+        font-size: 18px;
+    }
+
+    /* Make dropdowns take full width */
+    .dropdown {
+        width: 100%;
+    }
+
+    /* Hide dropdown content by default */
+    .dropdown-content {
+        position: relative;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: none;
+        padding-left: 15px; /* Indent child links */
+    }
+
+    /* Show dropdown links when hovering parent */
+    .dropdown:hover .dropdown-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Add downward arrow beside parent links with dropdowns */
+    .dropdown > a::after {
+        content: '';
+        display: inline-block;
+        margin-left: 6px;
+        margin-bottom: 2px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid white; /* White triangle */
+    }
+}
+
+/* Main container for search and grid */
+.gallery-content {
+    position: relative; /* Sits on top of the slideshow */
+    z-index: 10;      /* Ensure it's above the background but below the header */
+    padding: 120px 40px 40px; /* Top padding to clear the fixed header */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- SEARCH BAR --- */
+.search-section {
+    width: 100%;
+    max-width: 500px; /* Control max width of search bar */
+    margin-bottom: 40px;
+}
+
+.search-form {
+    width: 100%;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 15px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle white border */
+    border-radius: 50px; /* Pill shape */
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+    /* The Glassmorphism Effect */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(10px);         /* The key blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+}
+
+.search-bar::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- CATEGORY GRID --- */
+.category-grid {
+    display: grid;
+    /* Create a responsive grid: minimum item width 250px, max 1fr */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; /* Spacing between cards */
+    width: 100%;
+    max-width: 1200px; /* Control max width of the grid */
+}
+
+.category-card {
+    text-decoration: none;
+    border-radius: 15px; /* Rounded corners for the card */
+    overflow: hidden;    /* Keeps the image corners rounded */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* The Glassmorphism Effect */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.category-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.category-card img {
+    width: 100%;
+    height: 180px; /* Fixed height for image consistency */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    display: block;
+}
+
+.category-title {
+    display: block;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    text-transform: uppercase;
+}

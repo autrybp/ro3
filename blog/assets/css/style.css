@@ -35,23 +35,41 @@ body, .navbar {
   margin-left:30px;
 }
 
-.nav-center {
-  flex: 1;
-  justify-content: center;
+.search-container {
+  position: relative; /* This is crucial for positioning the icon */
+  display: inline-block; /* Ensures the container wraps the input's width */
 }
 
 .search-input {
-  width: 50%;
-  padding: 5px 10px;
-  background: transparent;
+  width: 150px;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  padding: 10px 35px 10px 0; /* Added right padding to prevent text from going under the icon */
+  font-size: 16px;
   color: white;
-  text-align: center;
+  outline: none;
+  transition: width 0.4s ease-in-out;
 }
 
 .search-input::placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-input:hover,
+.search-input:focus {
+  width: 250px;
+}
+
+.search-icon {
+  position: absolute; /* Positions the icon relative to the .search-container */
+  right: 5px; /* Position from the right edge of the container */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Fine-tune vertical centering */
+  width: 20px;
+  height: 20px;
+  fill: white; /* Color of the SVG icon */
+  pointer-events: none; /* Allows you to click "through" the icon onto the input field */
 }
 
 .nav-right {
