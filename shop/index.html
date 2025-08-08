@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RO3 Society | Photography Community, Blog & Academy</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <meta name="keywords" content="photography, community, blog, academy, RO3 Society, photography enthusiasts, learn photography, share photography, photography skills">
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">
+            <img src="assets/img/logo.png" alt="ro3society Logo" />
+        </a>
+
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+        <nav class="navbar">
+            <div class="dropdown">
+                <a href="/blog/">BLOG</a>
+                <div class="dropdown-content">
+                    <a href="/blog/">MAIN</a>
+                    <a href="/reviews/">REVIEWS</a>
+                    <a href="/blog/share-your-story/">SHARE YOUR STORY</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <!-- The class="active-link" is added here -->
+                <a href="/gallery/">GALLERY</a>
+                <div class="dropdown-content">
+                    <a href="/gallery/landscape/">LANDSCAPE</a>
+                    <a href="/gallery/portrait/">PORTRAIT</a>
+                    <a href="/gallery/cars/">CARS</a>
+                    <a href="/gallery/street/">STREET</a>
+                    <a href="/gallery/wildlife/">WILDLIFE</a>
+                    <a href="/gallery/architecture/">ARCHITECTURE</a>
+                    <a href="/gallery/food/">FOOD</a>
+                    <a href="/gallery/astrophotography/">ASTROPHOTOGRAPHY</a>
+                    <a href="/gallery/">MORE +</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="/shop/" class="active-link">SHOP</a>
+                <div class="dropdown-content">
+                    <a href="/shop/merch/">MERCH</a>
+                    <a href="/shop/prints/">PRINTS</a>
+                    <a href="/shop/gear/">GEAR</a>
+                </div>
+            </div>
+
+            <a href="/events/">EVENTS</a>
+
+            <div class="dropdown">
+                <a href="/projects/">PROJECTS</a>
+                <div class="dropdown-content">
+                    <a href="/projects/fairlady/">PROJECT FAIRLADY</a>
+                    <a href="/projects/batta/">PROJECT BATTA</a>
+                    <a href="/projects/">MORE +</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="/team/">TEAM</a>
+                <div class="dropdown-content">
+                    <a href="/team/people/">PEOPLE</a>
+                    <a href="/team/partners/">PARTNERS</a>
+                    <a href="/team/careers/">CAREERS</a>
+                    <a href="/team/">MORE +</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="/academy/">ACADEMY</a>
+                <div class="dropdown-content">
+                    <a href="/academy/waitlist/">JOIN THE WAITLIST</a>
+                    <a href="/academy/waitlist/">CERTIFICATES</a>
+                    <a href="/academy/waitlist/">LEARNING PATH</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="slideshow-container">
+        <div class="slide" style="background-image: url('assets/img/image1.jpg');"></div>
+        <div class="slide" style="background-image: url('assets/img/image2.jpg');"></div>
+        <div class="slide" style="background-image: url('assets/img/image3.jpg');"></div>
+        <div class="slide" style="background-image: url('assets/img/image4.jpg');"></div>
+        <div class="slide" style="background-image: url('assets/img/image5.jpg');"></div>
+        <div class="slide" style="background-image: url('assets/img/image6.jpg');"></div>
+    </div>
+
+        <main class="gallery-content">
+
+        <!-- Pill-shaped Search Bar -->
+        <div class="search-section">
+            <form class="search-form">
+                <input type="search" class="search-bar" placeholder="Explore the gallery...">
+            </form>
+        </div>
+
+        <!-- Gallery Categories Grid -->
+        <div class="category-grid">
+            <!-- Each item is a link to the category page -->
+            <a href="/gallery/landscape/" class="category-card">
+                <img src="assets/img/landscape-thumb.jpg" alt="Landscape Photography">
+                <span class="category-title">Landscape</span>
+            </a>
+
+            <a href="/gallery/portrait/" class="category-card">
+                <img src="assets/img/portrait-thumb.jpg" alt="Portrait Photography">
+                <span class="category-title">Portrait</span>
+            </a>
+
+            <a href="/gallery/cars/" class="category-card">
+                <img src="assets/img/cars-thumb.jpg" alt="Car Photography">
+                <span class="category-title">Cars</span>
+            </a>
+
+            <a href="/gallery/street/" class="category-card">
+                <img src="assets/img/street-thumb.jpg" alt="Street Photography">
+                <span class="category-title">Street</span>
+            </a>
+
+            <a href="/gallery/wildlife/" class="category-card">
+                <img src="assets/img/wildlife-thumb.jpeg" alt="Wildlife Photography">
+                <span class="category-title">Wildlife</span>
+            </a>
+
+            <a href="/gallery/architecture/" class="category-card">
+                <img src="assets/img/architecture-thumb.jpg" alt="Architecture Photography">
+                <span class="category-title">Architecture</span>
+            </a>
+
+            <a href="/gallery/food/" class="category-card">
+                <img src="assets/img/food-thumb.jpg" alt="Food Photography">
+                <span class="category-title">Food</span>
+            </a>
+
+            <a href="/gallery/astrophotography/" class="category-card">
+                <img src="assets/img/astro-thumb.jpg" alt="Astrophotography">
+                <span class="category-title">Astrophotography</span>
+            </a>
+        </div>
+
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

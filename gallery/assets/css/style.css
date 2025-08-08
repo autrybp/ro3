@@ -8,7 +8,7 @@
 html, body {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
-    background-color: #544545;
+    background-color: #6c5c5c;
 }
 
 /* --- HEADER AND NAVIGATION --- */
@@ -48,11 +48,22 @@ html, body {
     margin-right: 30px;
     font-size: 20px;
     transition: color 0.3s ease;
+    display: inline-block; /* Needed for padding & background */
+    padding: 8px 16px; /* Adjust pill size */
+    border-radius: 9999px; /* Pill shape */
+    transition: all 0.3s ease; /* Smooth hover effect */
+    text-decoration: none;
+    color: #ffffff;
+    
 }
 
 /* Add this new class for the current page */
 .navbar a.active-link {
-    color: #303030;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1); /* Glass background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 2px gray solid; /* Subtle border for visibility */
 }
 
 .navbar a:hover {
