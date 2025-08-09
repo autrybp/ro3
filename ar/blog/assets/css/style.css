@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, .navbar {
+  font-family: 'Mozilla Text', serif;
+  font-weight: 400;
+}
+
+.navbar {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+
+.nav-left, .nav-center, .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left:30px;
+}
+
+.search-container {
+  position: relative; /* This is crucial for positioning the icon */
+  display: inline-block; /* Ensures the container wraps the input's width */
+}
+
+.search-input {
+  width: 150px;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  padding: 10px 35px 10px 0; /* Added right padding to prevent text from going under the icon */
+  font-size: 16px;
+  color: white;
+  outline: none;
+  transition: width 0.4s ease-in-out;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-input:hover,
+.search-input:focus {
+  width: 250px;
+}
+
+.search-icon {
+  position: absolute; /* Positions the icon relative to the .search-container */
+  right: 5px; /* Position from the right edge of the container */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Fine-tune vertical centering */
+  width: 20px;
+  height: 20px;
+  fill: white; /* Color of the SVG icon */
+  pointer-events: none; /* Allows you to click "through" the icon onto the input field */
+}
+
+.nav-right {
+  gap: 15px;
+}
+
+.info-block {
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
