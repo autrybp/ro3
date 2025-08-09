@@ -6,10 +6,13 @@
 }
 
 html, body {
-    height: 100%;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #000;
+  height: 100%;
+  font-family: 'Cascadia Code', monospace;
+  font-weight: 700; /* make it bold */
+  background-color: #000;
+  color: #fff; /* optional, for visibility */
 }
+
 
 /* --- HEADER AND NAVIGATION --- */
 .header {
@@ -48,6 +51,8 @@ html, body {
     margin-right: 30px;
     font-size: 20px;
     transition: color 0.3s ease;
+    font-family: 'Cascadia Code', monospace;
+    font-weight: 700;
 }
 
 .navbar a:hover {
@@ -113,6 +118,8 @@ html, body {
     margin-top: 8px;
     text-transform: uppercase;
     transition: color 0.3s ease;
+    font-family: 'Cascadia Code', monospace;
+    font-weight: 700;
 }
 
 .dropdown:hover .dropdown-content {

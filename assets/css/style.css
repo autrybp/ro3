@@ -11,6 +11,13 @@ html, body {
     background-color: #000;
 }
 
+.cascadia-code-ar {
+  font-family: "Cascadia Code", monospace, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;  /* or whatever weight you want */
+  font-style: normal;
+}
+
 /* --- HEADER AND NAVIGATION --- */
 .header {
     position: fixed;
@@ -352,3 +359,65 @@ html, body {
     visibility: visible;
     opacity: 1;
   }
+
+  /* Floating button styles */
+.lang-float-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10001;
+  transition: transform 0.2s ease;
+}
+
+.lang-float-btn img {
+  width: 28px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.lang-float-btn:hover {
+  transform: scale(1.1);
+}
+
+.popup-actions {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  right: 60px; /* space for info icon */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align left */
+  gap: 10px; /* vertical space between checkbox and button */
+}
+
+.dont-show-label {
+  font-size: 13px;
+  color: #555;
+  display: flex;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.checkbox-container {
+  position: absolute;
+  bottom: 15px;
+  left: 120px; /* moves it away from Apply */
+  display: flex;
+  align-items: center;
+  gap: 6px; /* space between checkbox and text */
+  font-size: 13px;
+  color: #555;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin: 0;
+}

@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+
     <meta name="keywords" content="photography, community, blog, academy, RO3 Society, photography enthusiasts, learn photography, share photography, photography skills">
 </head>
 <body>
@@ -68,7 +72,6 @@
                     <a href="/team/people/">PEOPLE</a>
                     <a href="/team/partners/">PARTNERS</a>
                     <a href="/team/careers/">CAREERS</a>
-                    <a href="/team/">MORE +</a>
                 </div>
             </div>
 
@@ -83,38 +86,49 @@
         </nav>
     </header>
 
-    <div class="overlay">
-    <div class="popup">
-        <p>Choose your preferred language:</p>
+<div class="overlay">
+  <div class="popup">
+    <p>Choose your preferred language</p>
 
-        <input type="radio" id="lang-en" name="language" value="en" checked />
-        <label class="language-selector" for="lang-en">
-        <img src="/assets/img/flags/flag_us.png" alt="US Flag" />
-        <span>English</span>
-        </label>
+    <input type="radio" id="lang-en" name="language" value="en" checked />
+    <label class="language-selector" for="lang-en">
+      <img src="/assets/img/flags/flag_us.png" alt="US Flag" />
+      <span>English</span>
+    </label>
 
-        <input type="radio" id="lang-fr" name="language" value="fr" />
-        <label class="language-selector" for="lang-fr">
-        <img src="/assets/img/flags/flag_fr.jpg" alt="French Flag" />
-        <span>Français</span>
-        </label>
+    <input type="radio" id="lang-fr" name="language" value="fr" />
+    <label class="language-selector" for="lang-fr">
+      <img src="/assets/img/flags/flag_fr.jpg" alt="French Flag" />
+      <span>Français</span>
+    </label>
 
-        <input type="radio" id="lang-ar" name="language" value="ar" />
-        <label class="language-selector" for="lang-ar">
-        <img src="/assets/img/flags/flag_sa.png" alt="Arabic Flag" />
-        <span>العربية</span>
-        </label>
+    <input type="radio" id="lang-ar" name="language" value="ar" />
+    <label class="language-selector" for="lang-ar">
+      <img src="/assets/img/flags/flag_sa.png" alt="Arabic Flag" />
+      <span class="cascadia-code-ar">العربية</span>
+    </label>
 
-        <button class="apply-btn" id="applyBtn">Apply</button>
+    <button class="apply-btn" id="applyBtn">Apply</button>
 
-        <div class="info-container">
-        <div class="info-circle">i
-            <span class="info-tooltip">Select your preferred language and click Apply to proceed.</span>
-        </div>
-        </div>
-    </div>
+    <div class="checkbox-container">
+    <input type="checkbox" id="dontShowAgain" />
+    <label for="dontShowAgain">Don't show again</label>
     </div>
 
+
+    <div class="info-container">
+      <div class="info-circle">i
+        <span class="info-tooltip">You can always change the language again by clicking the language selector in the bottom corner.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Floating language button -->
+    <div class="lang-float-btn" id="langBtn">
+        <img src="/assets/img/flags/flag_us.png" alt="Language" />
+    </div>
 
     <div class="slideshow-container">
         <div class="slide" style="background-image: url('assets/img/image1.jpg');"></div>
