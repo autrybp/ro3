@@ -214,3 +214,141 @@ html, body {
     }
 }
 
+
+  .overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+  .overlay.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .popup {
+    width: 320px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px 60px 20px;
+    position: relative;
+    z-index: 10000;
+  }
+
+  .popup p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  /* Language selectors */
+  input[type="radio"] {
+    display: none;
+  }
+
+  .language-selector {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    width: fit-content;
+    user-select: none;
+    transition: border-color 0.3s, background-color 0.3s;
+    margin-bottom: 10px;
+  }
+
+  .language-selector img {
+    width: 28px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  /* Highlight selected */
+  input[type="radio"]:checked + label.language-selector {
+    border-color: #007bff;
+    background-color: #e6f0ff;
+  }
+
+  .language-selector:hover {
+    background-color: #f0f4ff;
+  }
+
+  /* Apply Button */
+  .apply-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    padding: 8px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .apply-btn:hover {
+    background-color: #0056b3;
+  }
+
+  /* Info Circle */
+  .info-container {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+  }
+
+  .info-circle {
+    width: 28px;
+    height: 28px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    cursor: default;
+    position: relative;
+    user-select: none;
+  }
+
+  /* Tooltip */
+  .info-tooltip {
+    visibility: hidden;
+    width: 220px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    bottom: 130%; /* above the circle */
+    right: 50%;
+    transform: translateX(50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 13px;
+    pointer-events: none;
+    z-index: 10001;
+  }
+
+  .info-circle:hover .info-tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
