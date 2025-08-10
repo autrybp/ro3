@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/img/favicon.png" type="image/x-icon">
     <meta name="keywords" content="photography, community, blog, academy, RO3 Society, photography enthusiasts, learn photography, share photography, photography skills">
 </head>
 <body>
     <header class="header">
         <a href="/" class="logo">
-            <img src="assets/img/logo.png" alt="ro3society Logo" />
+            <img src="../assets/img/logo.png" alt="ro3society Logo" />
         </a>
 
         <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -52,7 +53,13 @@
                 </div>
             </div>
 
-            <a href="/events/">EVENTS</a>
+            <div class="dropdown">
+                <a href="/events/">EVENTS</a>
+                <div class="dropdown-content">
+                    <a href="/events/merch/">CALENDAR</a>
+                    <a href="/events/prints/">LEADERBOARDS</a>
+                </div>
+            </div>
 
             <div class="dropdown">
                 <a href="/projects/">PROJECTS</a>
@@ -85,12 +92,12 @@
     </header>
 
     <div class="slideshow-container">
-        <div class="slide" style="background-image: url('assets/img/image1.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/img/image2.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/img/image3.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/img/image4.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/img/image5.jpg');"></div>
-        <div class="slide" style="background-image: url('assets/img/image6.jpg');"></div>
+        <div class="slide" style="background-image: url('../assets/img/image1.jpg');"></div>
+        <div class="slide" style="background-image: url('../assets/img/image2.jpg');"></div>
+        <div class="slide" style="background-image: url('../assets/img/image3.jpg');"></div>
+        <div class="slide" style="background-image: url('../assets/img/image4.jpg');"></div>
+        <div class="slide" style="background-image: url('../assets/img/image5.jpg');"></div>
+        <div class="slide" style="background-image: url('../assets/img/image6.jpg');"></div>
     </div>
 
         <main class="gallery-content">
