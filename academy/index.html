@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RO3 Society | Photography Community, Blog & Academy</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/script.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../assets/img/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+
     <meta name="keywords" content="photography, community, blog, academy, RO3 Society, photography enthusiasts, learn photography, share photography, photography skills">
 </head>
 <body>
@@ -29,7 +35,6 @@
             </div>
 
             <div class="dropdown">
-                <!-- The class="active-link" is added here -->
                 <a href="/gallery/">GALLERY</a>
                 <div class="dropdown-content">
                     <a href="/gallery/landscape/">LANDSCAPE</a>
@@ -45,13 +50,14 @@
             </div>
 
             <div class="dropdown">
-                <a href="/shop/" class="active-link">SHOP</a>
+                <a href="/shop/">SHOP</a>
                 <div class="dropdown-content">
                     <a href="/shop/merch/">MERCH</a>
                     <a href="/shop/prints/">PRINTS</a>
                     <a href="/shop/gear/">GEAR</a>
                 </div>
             </div>
+
 
             <div class="dropdown">
                 <a href="/events/">EVENTS</a>
@@ -76,20 +82,63 @@
                     <a href="/team/people/">PEOPLE</a>
                     <a href="/team/partners/">PARTNERS</a>
                     <a href="/team/careers/">CAREERS</a>
-                    <a href="/team/">MORE +</a>
                 </div>
             </div>
 
             <div class="dropdown">
                 <a href="/academy/">ACADEMY</a>
                 <div class="dropdown-content">
-                    <a href="/academy/">JOIN THE WAITLIST</a>
-                    <a href="/academy/">CERTIFICATES</a>
-                    <a href="/academy/">LEARNING PATH</a>
+                    <a href="/academy/waitlist/">JOIN THE WAITLIST</a>
+                    <a href="/academy/waitlist/">CERTIFICATES</a>
+                    <a href="/academy/waitlist/">LEARNING PATH</a>
                 </div>
             </div>
         </nav>
     </header>
+
+<div class="overlay">
+  <div class="popup">
+    <p>Choose your preferred language</p>
+
+    <input type="radio" id="lang-en" name="language" value="en" checked />
+    <label class="language-selector" for="lang-en">
+      <img src="/assets/img/flags/flag_us.png" alt="US Flag" />
+      <span>English</span>
+    </label>
+
+    <input type="radio" id="lang-fr" name="language" value="fr" />
+    <label class="language-selector" for="lang-fr">
+      <img src="/assets/img/flags/flag_fr.jpg" alt="French Flag" />
+      <span>Français</span>
+    </label>
+
+    <input type="radio" id="lang-ar" name="language" value="ar" />
+    <label class="language-selector" for="lang-ar">
+      <img src="/assets/img/flags/flag_sa.png" alt="Arabic Flag" />
+      <span class="cascadia-code-ar">العربية</span>
+    </label>
+
+    <button class="apply-btn" id="applyBtn">Apply</button>
+
+    <div class="checkbox-container">
+    <input type="checkbox" id="dontShowAgain" />
+    <label for="dontShowAgain">Don't show again</label>
+    </div>
+
+
+    <div class="info-container">
+      <div class="info-circle">i
+        <span class="info-tooltip">You can always change the language again by clicking the language selector in the bottom corner.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Floating language button -->
+    <div class="lang-float-btn" id="langBtn">
+        <img src="/assets/img/flags/flag_us.png" alt="Language" />
+    </div>
 
     <div class="slideshow-container">
         <div class="slide" style="background-image: url('../assets/img/image1.jpg');"></div>
@@ -99,61 +148,6 @@
         <div class="slide" style="background-image: url('../assets/img/image5.jpg');"></div>
         <div class="slide" style="background-image: url('../assets/img/image6.jpg');"></div>
     </div>
-
-        <main class="gallery-content">
-
-        <!-- Pill-shaped Search Bar -->
-        <div class="search-section">
-            <form class="search-form">
-                <input type="search" class="search-bar" placeholder="Explore the gallery...">
-            </form>
-        </div>
-
-        <!-- Gallery Categories Grid -->
-        <div class="category-grid">
-            <!-- Each item is a link to the category page -->
-            <a href="/gallery/landscape/" class="category-card">
-                <img src="assets/img/landscape-thumb.jpg" alt="Landscape Photography">
-                <span class="category-title">Landscape</span>
-            </a>
-
-            <a href="/gallery/portrait/" class="category-card">
-                <img src="assets/img/portrait-thumb.jpg" alt="Portrait Photography">
-                <span class="category-title">Portrait</span>
-            </a>
-
-            <a href="/gallery/cars/" class="category-card">
-                <img src="assets/img/cars-thumb.jpg" alt="Car Photography">
-                <span class="category-title">Cars</span>
-            </a>
-
-            <a href="/gallery/street/" class="category-card">
-                <img src="assets/img/street-thumb.jpg" alt="Street Photography">
-                <span class="category-title">Street</span>
-            </a>
-
-            <a href="/gallery/wildlife/" class="category-card">
-                <img src="assets/img/wildlife-thumb.jpeg" alt="Wildlife Photography">
-                <span class="category-title">Wildlife</span>
-            </a>
-
-            <a href="/gallery/architecture/" class="category-card">
-                <img src="assets/img/architecture-thumb.jpg" alt="Architecture Photography">
-                <span class="category-title">Architecture</span>
-            </a>
-
-            <a href="/gallery/food/" class="category-card">
-                <img src="assets/img/food-thumb.jpg" alt="Food Photography">
-                <span class="category-title">Food</span>
-            </a>
-
-            <a href="/gallery/astrophotography/" class="category-card">
-                <img src="assets/img/astro-thumb.jpg" alt="Astrophotography">
-                <span class="category-title">Astrophotography</span>
-            </a>
-        </div>
-
-    </main>
 
     <script>
         function toggleMenu() {
