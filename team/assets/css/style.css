@@ -223,3 +223,67 @@ body {
 .join-us {
   padding: 8rem 0;
 }
+
+/* Hamburger icon styling */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .transparent-navbar {
+    flex-wrap: wrap;
+  }
+
+  /* Show hamburger, hide links initially */
+  .hamburger {
+    display: block;
+  }
+
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* Show links when active */
+  .nav-right.active {
+    display: flex;
+  }
+
+  /* Founders cards - 1 per row with spacing */
+  .founders-cards {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .founder-card {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  /* Partners keep 2x2 grid */
+  .partner-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  /* Make 'In Collaboration With' smaller */
+  .partners h2 {
+    font-size: 1.5rem; /* was 2rem */
+    margin-bottom: 1.5rem;
+  }
+
+  /* Raise and enlarge 'Join Us' title */
+  .join-us h2 {
+    font-size: 2.5rem; /* bigger */
+    margin-bottom: 1rem;
+    margin-top: -2rem; /* raise it up */
+  }
+}
