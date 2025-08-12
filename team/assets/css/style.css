@@ -18,6 +18,25 @@ body {
   text-align: center;
 }
 
+/* Divider with grid pattern */
+.divider {
+  background: 
+    /* Grid pattern */
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    /* Base gradient */
+    linear-gradient(135deg, #111, #222);
+  background-size: 40px 40px; /* Size of each square */
+  padding: 4.5rem 0; 
+  margin: auto;
+  text-align: center;
+}
+
+.divider h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 /* Transparent Navbar */
 .transparent-navbar {
   position: fixed;
@@ -68,7 +87,6 @@ body {
   padding: 9.9rem 0; 
 }
 
-
 .hero h1 {
   font-size: 3rem;
   font-weight: 800;
@@ -88,6 +106,7 @@ body {
 .partners h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+  padding: 1rem 0;
 }
 
 .partner-logos {

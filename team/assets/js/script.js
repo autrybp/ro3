@@ -38,3 +38,4 @@ document.querySelectorAll('.founder-card').forEach(card => {
     card.style.transform = `rotateX(0deg) rotateY(0deg)`;
   });
 });
+
