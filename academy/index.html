@@ -18,121 +18,67 @@
 </head>
 <body>
     <header class="header">
-        <a href="/" class="logo">
-            <img src="assets/img/logo.png" alt="ro3society Logo" />
-        </a>
-
         <button class="hamburger" onclick="toggleMenu()">☰</button>
-
-        <nav class="navbar">
-            <div class="dropdown">
-                <a href="/blog/">BLOG</a>
-                <div class="dropdown-content">
-                    <a href="/blog/">MAIN</a>
-                    <a href="/reviews/">REVIEWS</a>
-                    <a href="/blog/share-your-story/">SHARE YOUR STORY</a>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <a href="/gallery/">GALLERY</a>
-                <div class="dropdown-content">
-                    <a href="/gallery/landscape/">LANDSCAPE</a>
-                    <a href="/gallery/portrait/">PORTRAIT</a>
-                    <a href="/gallery/cars/">CARS</a>
-                    <a href="/gallery/street/">STREET</a>
-                    <a href="/gallery/wildlife/">WILDLIFE</a>
-                    <a href="/gallery/architecture/">ARCHITECTURE</a>
-                    <a href="/gallery/food/">FOOD</a>
-                    <a href="/gallery/astrophotography/">ASTROPHOTOGRAPHY</a>
-                    <a href="/gallery/">MORE +</a>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <a href="/shop/">SHOP</a>
-                <div class="dropdown-content">
-                    <a href="/shop/merch/">MERCH</a>
-                    <a href="/shop/prints/">PRINTS</a>
-                    <a href="/shop/gear/">GEAR</a>
-                </div>
-            </div>
-
-
-            <div class="dropdown">
-                <a href="/events/">EVENTS</a>
-                <div class="dropdown-content">
-                    <a href="/events/merch/">CALENDAR</a>
-                    <a href="/events/prints/">LEADERBOARDS</a>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <a href="/projects/">PROJECTS</a>
-                <div class="dropdown-content">
-                    <a href="/projects/fairlady/">PROJECT FAIRLADY</a>
-                    <a href="/projects/batta/">PROJECT BATTA</a>
-                    <a href="/projects/">MORE +</a>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <a href="/team/">TEAM</a>
-                <div class="dropdown-content">
-                    <a href="/team/people/">PEOPLE</a>
-                    <a href="/team/partners/">PARTNERS</a>
-                    <a href="/team/careers/">CAREERS</a>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <a href="/academy/">ACADEMY</a>
-                <div class="dropdown-content">
-                    <a href="/academy/waitlist/">JOIN THE WAITLIST</a>
-                    <a href="/academy/waitlist/">CERTIFICATES</a>
-                    <a href="/academy/waitlist/">LEARNING PATH</a>
-                </div>
-            </div>
-        </nav>
     </header>
 
-<div class="overlay">
-  <div class="popup">
-    <p>Choose your preferred language</p>
+    <!-- Main content of the academy page -->
 
-    <input type="radio" id="lang-en" name="language" value="en" checked />
-    <label class="language-selector" for="lang-en">
-      <img src="/assets/img/flags/flag_us.png" alt="US Flag" />
-      <span>English</span>
-    </label>
 
-    <input type="radio" id="lang-fr" name="language" value="fr" />
-    <label class="language-selector" for="lang-fr">
-      <img src="/assets/img/flags/flag_fr.jpg" alt="French Flag" />
-      <span>Français</span>
-    </label>
 
-    <input type="radio" id="lang-ar" name="language" value="ar" />
-    <label class="language-selector" for="lang-ar">
-      <img src="/assets/img/flags/flag_sa.png" alt="Arabic Flag" />
-      <span class="cascadia-code-ar">العربية</span>
-    </label>
 
-    <button class="apply-btn" id="applyBtn">Apply</button>
 
-    <div class="checkbox-container">
-    <input type="checkbox" id="dontShowAgain" />
-    <label for="dontShowAgain">Don't show again</label>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Language selection popup -->
+
+    <div class="overlay">
+    <div class="popup">
+        <p>Choose your preferred language</p>
+
+        <input type="radio" id="lang-en" name="language" value="en" checked />
+        <label class="language-selector" for="lang-en">
+        <img src="/assets/img/flags/flag_us.png" alt="US Flag" />
+        <span>English</span>
+        </label>
+
+        <input type="radio" id="lang-fr" name="language" value="fr" />
+        <label class="language-selector" for="lang-fr">
+        <img src="/assets/img/flags/flag_fr.jpg" alt="French Flag" />
+        <span>Français</span>
+        </label>
+
+        <input type="radio" id="lang-ar" name="language" value="ar" />
+        <label class="language-selector" for="lang-ar">
+        <img src="/assets/img/flags/flag_sa.png" alt="Arabic Flag" />
+        <span class="cascadia-code-ar">العربية</span>
+        </label>
+
+        <button class="apply-btn" id="applyBtn">Apply</button>
+
+        <div class="checkbox-container">
+        <input type="checkbox" id="dontShowAgain" />
+        <label for="dontShowAgain">Don't show again</label>
+        </div>
+
+
+        <div class="info-container">
+        <div class="info-circle">i
+            <span class="info-tooltip">You can always change the language again by clicking the language selector in the bottom corner.</span>
+        </div>
+        </div>
+    </div>
     </div>
 
 
-    <div class="info-container">
-      <div class="info-circle">i
-        <span class="info-tooltip">You can always change the language again by clicking the language selector in the bottom corner.</span>
-      </div>
-    </div>
-  </div>
-</div>
 
 
     <!-- Floating language button -->
@@ -140,14 +86,6 @@
         <img src="/assets/img/flags/flag_us.png" alt="Language" />
     </div>
 
-    <div class="slideshow-container">
-        <div class="slide" style="background-image: url('../assets/img/image1.jpg');"></div>
-        <div class="slide" style="background-image: url('../assets/img/image2.jpg');"></div>
-        <div class="slide" style="background-image: url('../assets/img/image3.jpg');"></div>
-        <div class="slide" style="background-image: url('../assets/img/image4.jpg');"></div>
-        <div class="slide" style="background-image: url('../assets/img/image5.jpg');"></div>
-        <div class="slide" style="background-image: url('../assets/img/image6.jpg');"></div>
-    </div>
 
     <script>
         function toggleMenu() {

@@ -1,0 +1,43 @@
+body {
+  background-color: #18181b; /* Soft black with a hint of gray */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #f0f0f0; /* Light gray for headings */
+}
+
+button {
+  background-color: #2563eb; /* Bright blue for buttons */
+  color: #ffffff; /* White text on buttons */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d4ed8; /* Darker blue on hover */
+}
+
+input, textarea {
+  background-color: #1f2937; /* Dark gray for input fields */
+  color: #d1d5db; /* Light gray text in input fields */
+  border: 1px solid #374151; /* Slightly lighter gray border */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+  border-color: #60a5fa; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+footer {
+  background-color: #111827; /* Dark gray for footer */
+  color: #d1d5db; /* Light gray text in footer */
+  padding: 20px;
+  text-align: center;
+}
+
+
+

@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0f0f;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Transparent Navbar */
+.transparent-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* White line at bottom */
+}
+
+.transparent-navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.transparent-navbar a:hover {
+  color: #aaa;
+}
+
+.nav-left .back-button {
+  font-size: 1rem;
+}
+
+.nav-right {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Hero Section */
+.hero {
+  background: 
+    /* Grid pattern */
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    /* Base gradient */
+    linear-gradient(135deg, #111, #222);
+  background-size: 40px 40px; /* Size of each square */
+  padding: 9.9rem 0; 
+}
+
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #ccc;
+}
+
+/* Partners Section */
+.partners {
+  padding: 3rem 0;
+}
+
+.partners h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.partner-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.partner-logos img {
+  max-width: 100%;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.partner-logos img:hover {
+  transform: scale(1.05);
+}
+
+/* Mission Section */
+.mission {
+    background: 
+    /* Grid pattern */
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    /* Base gradient */
+    linear-gradient(135deg, #111, #222);
+  background-size: 40px 40px; /* Size of each square */
+  padding: 9.9rem 0;
+}
+
+.mission h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mission p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: #bbb;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.video-container video {
+  border-radius: 20px;
+  width: 90vw;      /* Make video width 90% of viewport width */
+  max-width: 900px; /* Cap the max width to 900px (or any size you want) */
+  height: auto;     /* Maintain aspect ratio */
+  outline: none;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Team Section */
+.founders {
+  padding: 3rem 0;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.founders-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  transition: transform 0.2s ease-out;
+  transform-style: preserve-3d;
+  perspective: 1000px; /* gives a sense of depth */
+  will-change: transform;
+}
+
+.founder-card {
+  position: relative;
+  border: 2px solid white;
+  border-radius: 15px;
+  width: 180px;        /* adjust as needed */
+  aspect-ratio: 3 / 4;
+  background: transparent;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.founder-name {
+  color: white;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.btn-join {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background: #ffffff;
+  color: #0f0f0f;
+  font-weight: 700;
+  border-radius: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25);
+}
+
+.btn-join:hover,
+.btn-join:focus {
+  background: #ddd;
+  color: #000;
+}
+
+
+.join-us {
+  padding: 8rem 0;
+}

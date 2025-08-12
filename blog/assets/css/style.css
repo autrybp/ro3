@@ -90,3 +90,171 @@ body, .navbar {
 .social-links a:hover {
   text-decoration: underline;
 }
+
+/* General Layout — 3 Vertical Parts */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HERO SECTION */
+.hero-section {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide {
+  display: none;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-slide.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-headline {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  color: white;
+  max-width: 70%;
+  text-align: center;
+}
+
+.hero-headline h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* SHORTS SECTION */
+.shorts-section {
+  text-align: center;
+}
+
+.shorts-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.shorts-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.shorts-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-behavior: smooth;
+}
+
+.shorts-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.shorts-scroll video {
+  width: 200px;
+  height: 350px;
+  border-radius: 15px;
+  background: black;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.shorts-arrow {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.shorts-arrow:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+
+.site-footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 2rem 1rem;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4); /* soft shadow above */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-nav {
+  margin-bottom: 1rem;
+}
+
+.footer-nav a {
+  color: #ccc;
+  margin: 0 0.8rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #777;
+}
