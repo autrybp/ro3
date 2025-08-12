@@ -96,6 +96,12 @@ body {
   gap: 2rem;
 }
 
+.partner p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: #bbb;
+}
+
 .partner-logos img {
   max-width: 100%;
   filter: brightness(0) invert(1);
@@ -105,6 +111,16 @@ body {
 .partner-logos img:hover {
   transform: scale(1.05);
 }
+
+.partners-description {
+  max-width: 700px;
+  margin: 2rem auto 0 auto;
+  color: #bbb;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
 
 /* Mission Section */
 .mission {
@@ -179,26 +195,46 @@ body {
   position: relative;
   border: 2px solid white;
   border-radius: 15px;
-  width: 180px;        /* adjust as needed */
+  width: 180px;
   aspect-ratio: 3 / 4;
   background: transparent;
+  
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;  /* vertical centering */
+  align-items: center;      /* horizontal centering */
+  
   padding: 1rem;
   box-sizing: border-box;
   font-weight: 700;
   font-size: 1.2rem;
   text-transform: uppercase;
   user-select: none;
+  text-align: center; /* center text */
+
+  text-decoration: none;  /* removes underline */
+  color: inherit;         /* inherit text color, so no default blue */
 }
 
+.founder-roles {
+  color: #ccc;
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem; /* space between each role line */
+  text-transform: none; /* keep roles normal case */
+}
+  
 .founder-name {
   color: white;
-  position: absolute;
-  bottom: 1rem;
-  left: 1rem;
 }
 
+
+/* Careers Section */
 .btn-join {
   display: inline-block;
   margin-top: 1.5rem;
@@ -256,18 +292,35 @@ body {
     display: flex;
   }
 
-  /* Founders cards - 1 per row with spacing */
-  .founders-cards {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
+/* Founders cards - 1 per row with spacing */
+.founders-cards {
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+}
 
-  .founder-card {
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
-  }
+.founder-card {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  font-size: 1.4rem;        /* Increased font size */
+  line-height: 1.5;         /* Better line height for readability */
+  padding: 1.2rem 1rem;     /* Extra padding inside cards */
+}
+
+.founder-roles {
+  font-size: 1rem;          /* Slightly bigger roles text */
+  line-height: 1.4;
+}
+
+.founders p {
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  font-size: 1.1rem;        /* Larger paragraph text */
+  line-height: 1.6;
+  color: #ddd;              /* Slightly lighter for softer reading */
+}
+
 
   /* Partners keep 2x2 grid */
   .partner-logos {
