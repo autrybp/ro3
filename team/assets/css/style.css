@@ -143,19 +143,35 @@ body {
 
 /* Mission Section */
 .mission {
-    background: 
-    /* Grid pattern */
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    /* Base gradient */
-    linear-gradient(135deg, #111, #222);
-  background-size: 40px 40px; /* Size of each square */
+  position: relative;
+  background: linear-gradient(135deg, #111, #222); /* base gradient only */
   padding: 9.9rem 0;
+  overflow: hidden;
+}
+
+.mission::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  filter: blur(1px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Keep content above the blurred grid */
+.mission > * {
+  position: relative;
+  z-index: 1;
 }
 
 .mission h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #bbb;
 }
 
 .mission p {
@@ -163,6 +179,7 @@ body {
   margin: 0 auto 2rem auto;
   color: #bbb;
 }
+
 
 .video-container {
   display: flex;
