@@ -1,0 +1,438 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0f0f;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Divider with grid pattern */
+.divider {
+  position: relative;
+  padding: 4.5rem 0; 
+  margin: auto;
+  text-align: center;
+  overflow: hidden; /* hide blurred edges */
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    /* Grid pattern */
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    /* Base gradient */
+    linear-gradient(135deg, #111, #222);
+  background-size: 40px 40px;
+  filter: blur(2px); /* this blurs the grid */
+  z-index: 0; /* behind content */
+}
+
+.divider > * {
+  position: relative;
+  z-index: 1; /* keep text above the blur */
+}
+
+
+.divider h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Transparent Navbar */
+.transparent-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* White line at bottom */
+}
+
+.transparent-navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.transparent-navbar a:hover {
+  color: #aaa;
+}
+
+.nav-left .back-button {
+  font-size: 1rem;
+}
+
+.nav-right {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #111, #222); /* base gradient only */
+  padding: 9.9rem 0;
+  overflow: hidden; /* hide blurred edges */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    /* Grid pattern */
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  filter: blur(1px); /* same blur as .mission */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Keep hero text above the blurred grid */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #ccc;
+}
+
+/* Partners Section */
+.partners {
+  padding: 3rem 0;
+}
+
+.partners h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+
+.partner-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.partner p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: #bbb;
+}
+
+.partner-logos img {
+  max-width: 100%;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.partner-logos img:hover {
+  transform: scale(1.05);
+}
+
+.partners-description {
+  max-width: 700px;
+  margin: 2rem auto 0 auto;
+  color: #bbb;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+/* Mission Section */
+.mission {
+  position: relative;
+  background: linear-gradient(135deg, #111, #222); /* base gradient only */
+  padding: 9.9rem 0;
+  overflow: hidden;
+}
+
+.mission::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  filter: blur(1px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Keep content above the blurred grid */
+.mission > * {
+  position: relative;
+  z-index: 1;
+}
+
+.mission h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #bbb;
+}
+
+.mission p {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  color: #bbb;
+}
+
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.video-container video {
+  border-radius: 20px;
+  width: 90vw;      /* Make video width 90% of viewport width */
+  max-width: 900px; /* Cap the max width to 900px (or any size you want) */
+  height: auto;     /* Maintain aspect ratio */
+  outline: none;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Team Section */
+.founders {
+  padding: 4rem 0;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.founders-cards {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  transition: transform 0.2s ease-out;
+  transform-style: preserve-3d;
+  perspective: 1000px; /* gives a sense of depth */
+  will-change: transform;
+}
+
+.founder-card {
+  position: relative;
+  border: 2px solid white;
+  border-radius: 15px;
+  width: 180px;
+  aspect-ratio: 3 / 4;
+  background: transparent;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical centering */
+  align-items: center;      /* horizontal centering */
+  
+  padding: 1rem;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  user-select: none;
+  text-align: center; /* center text */
+
+  text-decoration: none;  /* removes underline */
+  color: inherit;         /* inherit text color, so no default blue */
+}
+
+.founder-roles {
+  color: #ccc;
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem; /* space between each role line */
+  text-transform: none; /* keep roles normal case */
+}
+  
+.founder-name {
+  color: white;
+}
+
+
+/* Careers Section */
+.btn-join {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.85rem 2.5rem;
+  background: linear-gradient(135deg, #ffffff, #f2f2f2);
+  color: #0f0f0f;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+}
+
+.btn-join::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-join:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.35);
+}
+
+.btn-join:hover::before {
+  left: 100%;
+}
+
+.btn-join:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+
+
+.join-us {
+  padding: 8rem 0;
+}
+
+/* Hamburger icon styling */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .transparent-navbar {
+    flex-wrap: wrap;
+  }
+
+  /* Show hamburger, hide links initially */
+  .hamburger {
+    display: block;
+  }
+
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* Show links when active */
+  .nav-right.active {
+    display: flex;
+  }
+
+/* Founders cards - 1 per row with spacing */
+.founders-cards {
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.founder-card {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+  font-size: 1.4rem;        /* Increased font size */
+  line-height: 1.5;         /* Better line height for readability */
+  padding: 1.2rem 1rem;     /* Extra padding inside cards */
+}
+
+.founder-roles {
+  font-size: 1rem;          /* Slightly bigger roles text */
+  line-height: 1.4;
+}
+
+.founders p {
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+  font-size: 1.1rem;        /* Larger paragraph text */
+  line-height: 1.6;
+  color: #ddd;              /* Slightly lighter for softer reading */
+}
+
+
+  /* Partners keep 2x2 grid */
+  .partner-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  /* Make 'In Collaboration With' smaller */
+  .partners h2 {
+    font-size: 1.5rem; /* was 2rem */
+    margin-bottom: 1.5rem;
+  }
+
+  /* Raise and enlarge 'Join Us' title */
+  .join-us h2 {
+    font-size: 2.5rem; /* bigger */
+    margin-bottom: 1rem;
+    margin-top: -2rem; /* raise it up */
+  }
+}
